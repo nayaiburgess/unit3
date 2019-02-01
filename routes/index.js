@@ -11,7 +11,7 @@ router.post('/api/playlists', playlistController.create)
 //edit the playlist 
 router.patch('/api/playlists/:playlistId', playlistController.update)
 //delete the playlist 
-router.delete('/api/playlist/:playlistId', playlistController.delete)
+router.delete('/api/playlists/:playlistId', playlistController.delete)
 
 //show users 
 router.get('/api/user', userController.index)
