@@ -1,7 +1,20 @@
-.navbar {
-  width: 100vw; 
-  height: 50px; 
-  color: blue; 
+
+.homeLogo{
+  font-family: 'Fugaz One', cursive;
+  font-size: 50pt; 
+
 }
+
+.navLogo{
+  font-family: 'Fugaz One', cursive;
+  font-size: 20pt; 
+  margin-top: 5px;
+  margin-left: 13px; 
+  color: rgb(252, 0, 168); 
+
+}
+
+
+
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import NewPlaylist from "./NewPlaylist";
+import Navbar from './Navbar';
 
 class Playlists extends Component {
     state = {
@@ -28,28 +28,30 @@ componentDidMount() {
     render() {
         return (
             <div>
-                <h1>This is the Playlists page.</h1>
+                <Navbar />
                 {this.state.playlist.map((playlists, i) => (
-                        <div key={i}>
-                            <h3>{playlists.name}</h3>
+                        <div class= "container" key={i}>
+
+                            <h1 style= {{fontWeight: "600", fontSize: "25pt"}}>{playlists.name}</h1>
                             <img src = {playlists.coverArt} alt ="coverart" /> 
-                            <h3>{playlists.song1}</h3>
-                            <h3>{playlists.song2}</h3>
-                            <h3>{playlists.song3}</h3>
-                            <h3>{playlists.song4}</h3>
-                            <h3>{playlists.song5}</h3>
-                            <h3>{playlists.song6}</h3>
-                            <h3>{playlists.song7}</h3>
-                            <h3>{playlists.song8}</h3>
-                            <h3>{playlists.song9}</h3>
-                            <h3>{playlists.song10}</h3>
-                            
-                            <button onClick={()=>(this.deletePlaylist(playlists._id))}>Delete</button>
+                            <h3> 1. {playlists.song1}</h3>
+                            <h3> 2. {playlists.song2}</h3>
+                            <h3> 3. {playlists.song3}</h3>
+                            <h3> 4. {playlists.song4}</h3>
+                            <h3> 5. {playlists.song5}</h3>
+                            <h3> 6. {playlists.song6}</h3>
+                            <h3> 7. {playlists.song7}</h3>
+                            <h3> 8. {playlists.song8}</h3>
+                            <h3> 9. {playlists.song9}</h3>
+                            <h3> 10. {playlists.song10}</h3> <br />
+
+                            <button class="button is-danger" onClick={()=>(this.deletePlaylist(playlists._id))}>Delete</button>
 
                         </div>
                     ))}
-                <NewPlaylist getAllPlaylists = {this.getAllPlaylists} />
-
+<div class="container" style={{marginTop: "30px"}}>
+<a href = "/new-playlist"> <button className="button is-warning" >Create Playlist</button></a>
+</div>
 
             </div>
         );

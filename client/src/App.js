@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './App.css';
 import Playlists from './components/Playlists';
 import Navbar from './components/Navbar';
 import Home from './components/Home'; 
 import User from './components/User'; 
+import NewPlaylist from './components/NewPlaylist'; 
+
+
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-        <Navbar/> 
           <Route exact path = "/" component ={Home} />
-          <Route exact path = "/user" component ={User} />
-          <Route exact path = "/playlist" component ={Playlists} />
+          <Route exact path = "/all-users" component ={User} />
+          <Route exact path = "/new-playlist" component ={NewPlaylist} />
+          <Route exact path = "/all-playlists" component ={Playlists} />
+
       </div>
       </Router>
        
