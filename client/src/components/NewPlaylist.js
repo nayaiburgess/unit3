@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
-
+import swal from 'sweetalert';
 
 
 
@@ -36,7 +36,14 @@ class newPlaylist extends Component {
         const newPlaylist = this.state.playlists
         axios.post('/api/playlists', newPlaylist)
             .then((res) => {
-                alert("your playlist was created! click here to view all")
+
+                const link = document.createElement('div')
+                link.innerHTML = "Your playlist has been created. Click <a href='/all-playlists'> here </a> to view all"
+
+                swal({
+                    title: "It's Lit!",
+                    content: link,
+                  })
             })
     }
 

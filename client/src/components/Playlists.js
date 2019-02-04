@@ -29,11 +29,16 @@ componentDidMount() {
         return (
             <div>
                 <Navbar />
+            <div class= "container">
                 {this.state.playlist.map((playlists, i) => (
-                        <div class= "container" key={i}>
-
+                        <div style= {{margin: "50px" }} class= "container" key={i}>
+                                <div style= {{margin: "50px"}} class="columns">
+                                <div class="column">
+                            <img style = {{ maxWidth: "300px"}}src = {playlists.coverArt} alt ="coverart" /> 
+                            </div>
+                            <div class= "column">
                             <h1 style= {{fontWeight: "600", fontSize: "25pt"}}>{playlists.name}</h1>
-                            <img src = {playlists.coverArt} alt ="coverart" /> 
+
                             <h3> 1. {playlists.song1}</h3>
                             <h3> 2. {playlists.song2}</h3>
                             <h3> 3. {playlists.song3}</h3>
@@ -44,15 +49,17 @@ componentDidMount() {
                             <h3> 8. {playlists.song8}</h3>
                             <h3> 9. {playlists.song9}</h3>
                             <h3> 10. {playlists.song10}</h3> <br />
+                            </div>
 
-                            <button class="button is-danger" onClick={()=>(this.deletePlaylist(playlists._id))}>Delete</button>
+                            <button class="button is-danger" onClick={()=>(this.deletePlaylist(playlists._id))}>&times;</button>
+                            </div>
+
 
                         </div>
                     ))}
-<div class="container" style={{marginTop: "30px"}}>
-<a href = "/new-playlist"> <button className="button is-warning" >Create Playlist</button></a>
-</div>
 
+
+            </div>
             </div>
         );
     }

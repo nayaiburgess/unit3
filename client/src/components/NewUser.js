@@ -24,6 +24,7 @@ class newUsers extends Component {
         axios.post('/api/user', newUsers)
         .then((res) => {
             this.props.getAllUsers()
+            this.props.toggleNewUser()
         })
     }
 
@@ -31,9 +32,25 @@ class newUsers extends Component {
         return (
             <div>
                 <form onSubmit = {this.handleSubmit}>
-                    <input type = "text" name = "name" value ={this.state.Users.name} placeholder = "Name" onChange = {this.handleChange}></input>
-                    <input type = "text" name = "bio" value = {this.state.Users.bio} placeholder = "bio" onChange = {this.handleChange}></input>
-                    <button>Submit</button>
+
+
+                <div style = {{ marginTop: "20px" }} class="field">
+
+                        <label class="label"> Username </label>
+                        <div class="control">
+                        <input class="input" type="text" name="name" value={this.state.Users.name} placeholder="Name" onChange={this.handleChange}></input>
+                        </div>
+                    </div>
+
+                    <div style = {{ marginTop: "20px" }} class="field">
+
+<label class="label"> Bio </label>
+<div class="control">
+<input class = "input" type = "text" name = "bio" value = {this.state.Users.bio} placeholder = "Bio" onChange = {this.handleChange}></input>
+</div>
+</div>
+
+                    <button class="button is-warning is-small">Submit</button>
                 </form>
 
             </div>

@@ -19,8 +19,9 @@ class Navbar extends Component {
     <div class="navbar-start">
      
       <Link to='/' class="navbar-item">Home</Link>
-
       <Link to='/all-playlists' class="navbar-item">Playlists</Link>
+
+      <Link to='/new-playlist' class="navbar-item"> Create Playlist</Link>
 
       <Link to='/all-users' class="navbar-item">Users</Link>
 
@@ -28,12 +29,6 @@ class Navbar extends Component {
     </div>
 
 </nav>
-
-
-
-
-
-
 
         );
     }
