@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import axios from "axios";
 import NewUser from './NewUser';
 import Navbar from './Navbar';
+// import EditUserForm from './EditUserForm';
 
 class User extends Component {
     state = {
         users: [{}], 
-        newUserShown: false 
+        newUserShown: false ,
+        editFormVisible: false
     }
 
     componentDidMount() {
@@ -31,6 +33,11 @@ class User extends Component {
     toggleNewUser = () => {
         this.setState({ newUserShown: !this.state.newUserShown })
     }
+
+    // toggleEditUserForm = (user) => {
+    //         this.setState({editFormVisible: !this.state.editFormVisible})
+    //     }
+    
 
     render() {
         return (
@@ -71,8 +78,10 @@ class User extends Component {
                                     </div>
                                 </div>
                         <button style = {{ margin: "15px"}}class="button is-warning" onClick={() => (this.deleteUser(user._id))}>Delete</button>
-                        <button style = {{ margin: "15px"}}class="button is-warning" >Edit</button>
-
+                        <button style = {{ margin: "15px"}}class="button is-warning">Edit</button>
+                        {/* {this.state.editFormVisible ? <EditUserForm getAllUsers={this.getAllUsers}
+                                toggleEditUserForm={this.toggleEditUserForm}/>
+                                : null} */}
                             </div> 
 
                         </div>
@@ -80,7 +89,6 @@ class User extends Component {
                     </div>
 
                 ))}
-
         
             </div>
         );
