@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; 
+
 class Navbar extends Component {
     render() {
         return (
@@ -8,7 +9,7 @@ class Navbar extends Component {
   <div class="navbar-brand">
     <h1 className= "navLogo">playlistME!</h1>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>

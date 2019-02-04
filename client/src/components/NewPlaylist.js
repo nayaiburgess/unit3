@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import swal from 'sweetalert';
 
 
-
 class newPlaylist extends Component {
 
     state = {

@@ -54,7 +54,6 @@ componentDidMount() {
                             <button class="button is-danger" onClick={()=>(this.deletePlaylist(playlists._id))}>&times;</button>
                             </div>
 
-
                         </div>
                     ))}
 

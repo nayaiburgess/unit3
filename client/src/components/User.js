@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import axios from "axios";
 import NewUser from './NewUser';
 import Navbar from './Navbar';
-// import EditUserForm from './EditUserForm';
 
 class User extends Component {
     state = {
         users: [{}], 
-        newUserShown: false ,
-        editFormVisible: false
+        newUserShown: false 
     }
 
     componentDidMount() {
@@ -34,11 +32,6 @@ class User extends Component {
         this.setState({ newUserShown: !this.state.newUserShown })
     }
 
-    // toggleEditUserForm = (user) => {
-    //         this.setState({editFormVisible: !this.state.editFormVisible})
-    //     }
-    
-
     render() {
         return (
             <div >
@@ -52,7 +45,6 @@ class User extends Component {
   : null}
 
  </div>
-
 
                 {this.state.users.map((user, i) => (
                     <div style = {{marginTop: "50px"}} key={i}>
@@ -79,9 +71,6 @@ class User extends Component {
                                 </div>
                         <button style = {{ margin: "15px"}}class="button is-warning" onClick={() => (this.deleteUser(user._id))}>Delete</button>
                         <button style = {{ margin: "15px"}}class="button is-warning">Edit</button>
-                        {/* {this.state.editFormVisible ? <EditUserForm getAllUsers={this.getAllUsers}
-                                toggleEditUserForm={this.toggleEditUserForm}/>
-                                : null} */}
                             </div> 
 
                         </div>
