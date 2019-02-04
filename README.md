@@ -12,3 +12,8 @@ https://trello.com/b/aGlkmDle/project-3
 https://github.com/nayaiburgess/McLarenShop
 
 #Heroku and Github
+https://frozen-brook-70167.herokuapp.com/
+https://github.com/nayaiburgess/unit3
+
+#SHOUT OUT
+BIG BIG BIG BIG BIG shout out to Shalain. She guided me throughout the project after I had to start over from scratch. She even gave me a few styling tips for my css. 
