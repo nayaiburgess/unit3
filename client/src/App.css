@@ -5,6 +5,13 @@
 
 }
 
+.homeContent {
+  float: right; 
+  text-align: right; 
+}
+
+
+
 .navLogo{
   font-family: 'Fugaz One', cursive;
   font-size: 20pt; 
