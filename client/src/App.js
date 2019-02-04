@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './App.css';
 import Playlists from './components/Playlists';
-import Navbar from './components/Navbar';
 import Home from './components/Home'; 
 import User from './components/User'; 
 import NewPlaylist from './components/NewPlaylist'; 

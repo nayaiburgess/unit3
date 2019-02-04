@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
+import Navbar from './Navbar'
 
 
 class newUsers extends Component {
@@ -31,6 +32,7 @@ class newUsers extends Component {
     render() {
         return (
             <div>
+                <Navbar />
                 <form onSubmit = {this.handleSubmit}>
 
 
