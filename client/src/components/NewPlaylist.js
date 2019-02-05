@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import swal from 'sweetalert';
 
 
+
 class newPlaylist extends Component {
 
     state = {
@@ -37,8 +38,7 @@ class newPlaylist extends Component {
             .then((res) => {
 
                 const link = document.createElement('div')
-                link.innerHTML = "Your playlist has been created. Click <a href='/all-playlists'> here </a> to view all"
-
+                link.innerHTML = "Your playlist has been created."
                 swal({
                     title: "It's Lit!",
                     content: link,
