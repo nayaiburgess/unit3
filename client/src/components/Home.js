@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Link from 'react-router-dom';
 class Home extends Component {
     render() {
         return (
@@ -10,7 +10,7 @@ class Home extends Component {
                     <h1 className ="homeLogo">
                       playlistME! 
                     </h1>
-                    <a href = "/new-playlist"> <button className="button is-warning homeButton" > Create Playlist </button></a>
+                    <Link to = "/new-playlist"> <button className="button is-warning homeButton" > Create Playlist </button></Link>
                   </div>
                 </div>
               </section>
