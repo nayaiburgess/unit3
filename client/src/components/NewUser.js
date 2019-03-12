@@ -32,7 +32,6 @@ class newUsers extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <form onSubmit = {this.handleSubmit}>
 
 
