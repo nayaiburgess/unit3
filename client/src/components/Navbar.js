@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; 
 
 class Navbar extends Component {
+
+toggelBurger =  () => {
+  var burger = document.querySelector('.burger');
+  var nav = document.querySelector('#'+burger.dataset.target);
+
+  burger.addEventListener("click", function(){
+    burger.classList.toggle('is-active');
+    nav.classList.toggle('is-active');
+  })
+}
+
+
     render() {
         return (
 
